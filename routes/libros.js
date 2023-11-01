@@ -82,4 +82,177 @@ router.delete("/libros/:id", async (req, res) => {
 });
 
 
+//////////////////////////////////////////////// CONSULTAS ////////////////////////////////////////////////
+
+router.get("/consulta1", async (req, res) => {
+    try {
+        const todosLosLibros = await Libro.find();
+
+        if (todosLosLibros) {
+            res.json(todosLosLibros);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta2/:categoria", async (req, res) => {
+    try {
+        const libroscategoria = await Libro.find({ Categoria: req.params.categoria });
+
+        if (libroscategoria) {
+            res.json(libroscategoria);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta3/:autor", async (req, res) => {
+    try {
+        const librosAutorEspecifico = await Libro.find({ Autor: req.params.autor });
+
+        if (librosAutorEspecifico) {
+            res.json(librosAutorEspecifico);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta4", async (req, res) => {
+    try {
+        const librosOrdenadosPorCalificacion = await Libro.find().sort({ Calificacion: -1 });
+
+        if (librosOrdenadosPorCalificacion) {
+            res.json(librosOrdenadosPorCalificacion);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta5", async (req, res) => {
+    try {
+        const librosPrecioInferior20 = await Libro.find({ Precio: { $lt: 20 } });
+
+        if (librosPrecioInferior20) {
+            res.json(librosPrecioInferior20);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta6/:clave", async (req, res) => {
+    try {
+        const librosCoincidentes = await Libro.find({
+            $or: [
+              { Titulo: { $regex: req.params.clave, $options: 'i' } },
+              { Descripcion: { $regex: req.params.clave, $options: 'i' } }
+            ]
+          });         
+
+        if (librosCoincidentes) {
+            res.json(librosCoincidentes);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta7", async (req, res) => {
+    try {
+        const autoresMasCaros = await Libro.aggregate([
+            {
+              $group: {
+                _id: "$Autor",
+                totalPrecioLibros: { $sum: "$Precio" }
+              }
+            },
+            {
+              $sort: { totalPrecioLibros: -1 }
+            },
+            {
+              $limit: 10
+            }
+          ]);
+
+        if (autoresMasCaros) {
+            res.json(autoresMasCaros);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta8/:titulo", async (req, res) => {
+    try {
+        const libroStock = await Libro.findOne({ Titulo: req.params.titulo }, { Titulo: 1, Stock: 1, _id: 0 });
+
+        if (libroStock) {
+            res.json(libroStock);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta9", async (req, res) => {
+    try {
+        const precioPromedio = await Libro.aggregate([
+            {
+              $group: {
+                _id: null,
+                precioPromedio: { $avg: "$Precio" }
+              }
+            }
+        ]);
+
+        if (precioPromedio) {
+            res.json(precioPromedio);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
+router.get("/consulta10", async (req, res) => {
+    try {
+        const categorias = await Libro.distinct("Categoria");
+        const librosPorCategoria = await Promise.all(
+            categorias.map(async (categoria) => {
+                const libros = await Libro.find({ Categoria: categoria });
+                return { Categoria: categoria, Libros: libros };
+            })
+        );
+
+        if (librosPorCategoria) {
+            res.json(librosPorCategoria);
+        } else {
+            res.status(404).json({ error: "Libro no encontrado" });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener el libro" });
+    }
+});
+
 module.exports = router;
