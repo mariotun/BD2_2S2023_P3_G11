@@ -96,14 +96,14 @@ app.put("/libros/:id", async (req, res) => {
 // Endpoint para eliminar un libro por ID (DELETE)
 app.delete("/libros/:id", async (req, res) => {
     try {
-        const libro = await Libro.findByIdAndRemove(req.params.id);
+        const libro = await Libro.findByIdAndDelete(req.params.id);
         if (libro) {
             res.json({ mensaje: "Libro eliminado correctamente" });
         } else {
             res.status(404).json({ error: "Libro no encontrado" });
         }
     } catch (error) {
-        res.status(500).json({ error: "Error al eliminar el libro" });
+            res.status(500).json({ error: "Error al eliminar el libro" });
     }
 });
 

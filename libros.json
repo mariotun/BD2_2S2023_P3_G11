@@ -1,0 +1,202 @@
+[
+  {
+    "Titulo": "Matar a un ruiseñor",
+    "Autor": "Harper Lee",
+    "Descripcion": "La novela clásica ganadora del Pulitzer.",
+    "FechaDePublicacion": "1960-07-11",
+    "Calificacion": 5,
+    "Stock": 50,
+    "Categoria": "Ficción",
+    "Precio": 19.99
+  },
+  {
+    "Titulo": "Cien años de soledad",
+    "Autor": "Gabriel García Márquez",
+    "Descripcion": "Una obra maestra del realismo mágico.",
+    "FechaDePublicacion": "1967-05-30",
+    "Calificacion": 5,
+    "Stock": 75,
+    "Categoria": "Ficción",
+    "Precio": 24.99
+  },
+  {
+    "Titulo": 1984,
+    "Autor": "George Orwell",
+    "Descripcion": "Una visión distópica del futuro.",
+    "FechaDePublicacion": "1949-06-08",
+    "Calificacion": 4,
+    "Stock": 60,
+    "Categoria": "Ficción",
+    "Precio": 14.99
+  },
+  {
+    "Titulo": "El Gran Gatsby",
+    "Autor": "F. Scott Fitzgerald",
+    "Descripcion": "La historia de la alta sociedad en la década de 1920.",
+    "FechaDePublicacion": "1925-04-10",
+    "Calificacion": 4,
+    "Stock": 40,
+    "Categoria": "Ficción",
+    "Precio": 16.99
+  },
+  {
+    "Titulo": "Matar a un elefante",
+    "Autor": "George Orwell",
+    "Descripcion": "Un ensayo sobre la experiencia del autor en Birmania.",
+    "FechaDePublicacion": "1936-11-12",
+    "Calificacion": 3,
+    "Stock": 30,
+    "Categoria": "No Ficción",
+    "Precio": 10.99
+  },
+  {
+    "Titulo": "En el camino",
+    "Autor": "Jack Kerouac",
+    "Descripcion": "La novela que definió la Generación Beat.",
+    "FechaDePublicacion": "1957-09-05",
+    "Calificacion": 4,
+    "Stock": 45,
+    "Categoria": "Ficción",
+    "Precio": 18.99
+  },
+  {
+    "Titulo": "Mujer en punto cero",
+    "Autor": "Nawal El Saadawi",
+    "Descripcion": "La historia de una prisionera egipcia.",
+    "FechaDePublicacion": "1975-03-01",
+    "Calificacion": 4,
+    "Stock": 20,
+    "Categoria": "Ficción",
+    "Precio": 12.99
+  },
+  {
+    "Titulo": "El camino",
+    "Autor": "Jack London",
+    "Descripcion": "Una historia de aventuras en el Yukón.",
+    "FechaDePublicacion": "1903-09-12",
+    "Calificacion": 4,
+    "Stock": 55,
+    "Categoria": "Ficción",
+    "Precio": 17.99
+  },
+  {
+    "Titulo": "Crimen y castigo",
+    "Autor": "Fyodor Dostoevsky",
+    "Descripcion": "La lucha de un estudiante contra la moralidad.",
+    "FechaDePublicacion": "1866-01-12",
+    "Calificacion": 5,
+    "Stock": 35,
+    "Categoria": "Ficción",
+    "Precio": 21.99
+  },
+  {
+    "Titulo": "Orgullo y prejuicio",
+    "Autor": "Jane Austen",
+    "Descripcion": "Una historia de amor y prejuicio en la Inglaterra del siglo XIX.",
+    "FechaDePublicacion": "1813-01-28",
+    "Calificacion": 5,
+    "Stock": 70,
+    "Categoria": "Ficción",
+    "Precio": 22.99
+  },
+  {
+    "Titulo": "Don Quijote de la Mancha",
+    "Autor": "Miguel de Cervantes Saavedra",
+    "Descripcion": "La aventura de un caballero y su fiel escudero.",
+    "FechaDePublicacion": "1605-01-16",
+    "Calificacion": 5,
+    "Stock": 90,
+    "Categoria": "Ficción",
+    "Precio": 27.99
+  },
+  {
+    "Titulo": "Ulises",
+    "Autor": "James Joyce",
+    "Descripcion": "Un recorrido literario por un día en la vida de Leopold Bloom.",
+    "FechaDePublicacion": "1922-02-02",
+    "Calificacion": 4,
+    "Stock": 60,
+    "Categoria": "Ficción",
+    "Precio": 19.99
+  },
+  {
+    "Titulo": "Matar a un mirlo dorado",
+    "Autor": "Harper Lee",
+    "Descripcion": "La secuela del clásico \"Matar a un ruiseñor\".",
+    "FechaDePublicacion": "2015-07-14",
+    "Calificacion": 4,
+    "Stock": 40,
+    "Categoria": "Ficción",
+    "Precio": 16.99
+  },
+  {
+    "Titulo": "Los juegos del hambre",
+    "Autor": "Suzanne Collins",
+    "Descripcion": "Un futuro distópico de lucha por la supervivencia.",
+    "FechaDePublicacion": "2008-09-14",
+    "Calificacion": 4,
+    "Stock": 55,
+    "Categoria": "Ficción",
+    "Precio": 18.99
+  },
+  {
+    "Titulo": "Rayuela",
+    "Autor": "Julio Cortázar",
+    "Descripcion": "Una novela experimental en la que el lector elige su propia lectura.",
+    "FechaDePublicacion": "1963-06-03",
+    "Calificacion": 5,
+    "Stock": 30,
+    "Categoria": "Ficción",
+    "Precio": 15.99
+  },
+  {
+    "Titulo": "El nombre de la rosa",
+    "Autor": "Umberto Eco",
+    "Descripcion": "Un misterio en una abadía medieval.",
+    "FechaDePublicacion": "1980-09-29",
+    "Calificacion": 5,
+    "Stock": 35,
+    "Categoria": "Ficción",
+    "Precio": 22.99
+  },
+  {
+    "Titulo": "Código Da Vinci",
+    "Autor": "Dan Brown",
+    "Descripcion": "Una conspiración que podría cambiar la historia del cristianismo.",
+    "FechaDePublicacion": "2003-03-18",
+    "Calificacion": 3,
+    "Stock": 65,
+    "Categoria": "Ficción",
+    "Precio": 25.99
+  },
+  {
+    "Titulo": "Los hombres me explican cosas",
+    "Autor": "Rebecca Solnit",
+    "Descripcion": "Ensayos feministas sobre la experiencia de las mujeres.",
+    "FechaDePublicacion": "2014-05-10",
+    "Calificacion": 5,
+    "Stock": 40,
+    "Categoria": "No Ficción",
+    "Precio": 14.99
+  },
+  {
+    "Titulo": "Sapiens: De animales a dioses",
+    "Autor": "Yuval Noah Harari",
+    "Descripcion": "Una historia de la humanidad.",
+    "FechaDePublicacion": "2011-02-10",
+    "Calificacion": 5,
+    "Stock": 75,
+    "Categoria": "No Ficción",
+    "Precio": 26.99
+  },
+  {
+    "Titulo": "Breve historia del tiempo",
+    "Autor": "Stephen Hawking",
+    "Descripcion": "La explicación del universo para todos.",
+    "FechaDePublicacion": "1988-04-01",
+    "Calificacion": 4,
+    "Stock": 25,
+    "Categoria": "No Ficción",
+    "Precio": 19.99
+  }
+]
